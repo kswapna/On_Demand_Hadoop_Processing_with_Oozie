@@ -1,0 +1,14 @@
++--------------------------------------+------------------------------+--------+--------+
+|                  ID                  |             Name             | Status | Server |
++--------------------------------------+------------------------------+--------+--------+
+| 0315a9e7-7ed0-4d3d-adfa-1e1f755887bb | ubuntu-12.04-amd64-lxc       | ACTIVE |        |
+| 058a19c0-5041-4710-b799-c65d487af7d0 | ubuntu-10.04-amd64           | ACTIVE |        |
+| 461d83c9-b342-42dd-8773-4f5013f9d8e4 | ubuntu-12.04-amd64-graphical | ACTIVE |        |
+| 673b1e15-c4b9-4420-95cd-162b131aae28 | centos-6.2-x86_64            | ACTIVE |        |
+| 7164dfde-c29c-4b69-a67b-96c6ef98d067 | debian-6.0.5-amd64           | ACTIVE |        |
+| 7e3254eb-0e32-4620-ae87-ea6f848d033f | ubuntu-12.04-amd64           | ACTIVE |        |
+| 7f8ffe2a-cf91-4663-9594-b8c9a1a8122c | fedora-16-x86_64             | ACTIVE |        |
+| a7213345-f4be-41d3-9c11-2626c19f0e69 | ubuntu-13.04-amd64           | ACTIVE |        |
+| e7f7d507-fd28-4a86-8898-882e080cdc00 | savanna-ubuntu-hadoop        | ACTIVE |        |
+| f7f4b2fa-c025-4fab-8cf5-3177a009131f | centos-6.2-x86_64-clia       | ACTIVE |        |
++--------------------------------------+------------------------------+--------+--------+

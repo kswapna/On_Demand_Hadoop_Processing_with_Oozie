@@ -1,0 +1,198 @@
+WHY	NOSQL	?	
+"  Scalability	:	Horizontal	
+"  Rela>onal	Databases	do	no	good	when	
+distributed	
+"  NOSQL	:	Distributed,	Flexible	Schema,	
+Relaxing	Consistency
+Desired	Characteris>
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How is it implemented?
+−
+Typically, in order to virtualize, you would use a layer of software that
+provides the illusion of a "real" machine to multiple instances of "virtual
+machines". This layer is traditionally called the Virtual Machine Monitor
+(VMM) or
+“
+hypervisor
+”
+. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+IaaS, PaaS and SaaS are cloud computing service models.
+
+IaaS(Infrastructure as a service), as the name suggests, provides you the computing infrastructure, physical or (quite often) virtual machines and other resources like virtual-machine disk image library, block and file-based storage, firewalls, load balancers, IP addresses, virtual local area networks etc. Examples : Amazon EC2, Windows Azure, Rackspace.
+
+PaaS(Platform as a service), as the name suggests, provides you computing platforms which typically includes operating system, programming language execution environment, database, web server etc. Examples : AWS Elastic Beanstalk, Heroku, Force.com, Google App Engine.
+
+While in Saas(Software as a service) model you are provided with access to application softwares often referred to as on-demand softwares. You don't have to worry about the installation, setup and running of the application. Service provider will do that for you. You just have to pay and use it through some client. Examples : Google Apps, Microsoft Office 365.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Big data[1][2] is the term for a collection of data sets so large and complex that it becomes difficult to process using on-hand database management tools or traditional data processing applications. The challenges include capture, curation, storage,[3] search, sharing, transfer, analysis,[4] and visualization. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Research topic?
+
+The Namenode could be single point failure: automatic failover
+is NOT supported! Another research topic
+
+It uses heuristics to determine optimal number of
+files per directory and creates directories
+appropriately:
+Research issue?
+
+Rackaware replica placement:
+Goal: improve reliability, availability and network bandwidth
+utilization
+Research topic
+
+Replicas are typically placed on unique racks
+Simple but non optimal
+Writes are expensive
+Replication factor is 3
+Another research topic?
+Replicas are placed: one on a node in a local
+rack, one on a different node in the local rack
+and one on a node in a different rack.
+1/3 of the replica on a node, 2/3 on a rack and
+1/3 distributed evenly across remaining racks.
+
+In the event of a sudden high demand for a
+particular file, a scheme might dynamically create
+additional replicas and rebalance other data in the
+cluster.
+These types of data rebalancing are not yet
+implemented:
+research issue.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hubs.....firewalls
+
+Hub
+A common connection point for devices in a network. Hubs are commonly used to connect segments of a LAN. A hub contains multiple ports. When a packet arrives at one port, it is copied to the other ports so that all segments of the LAN can see all packets.
+
+Switch
+In networks, a device that filters and forwards packets between LAN segments. Switches operate at the data link layer (layer 2) and sometimes the network layer (layer 3) of the OSI Reference Model and therefore support any packet protocol. LANs that use switches to join segments are called switched LANs or, in the case of Ethernet networks, switched Ethernet LANs.
+
+ 
+Router
+A device that forwards data packets along networks. A router is connected to at least two networks, commonly two LANs or WANs or a LAN and its ISP.s network. Routers are located at gateways, the places where two or more networks connect. Routers use headers and forwarding tables to determine the best path for forwarding the packets, and they use protocols such as ICMP to communicate with each other and configure the best route between any two hosts.
+
+Firewalls
+A firewall is a software or hardware-based network security system that controls the incoming and outgoing network traffic by analyzing the data packets and determining whether they should be allowed through or not, based on a rule set. A firewall establishes a barrier between a trusted, secure internal network and another network (e.g., the Internet) that is not assumed to be secure and trusted.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Different Scheduling policies for hadoop:
+FIFO
+Fair-- Fair scheduling is a method of assigning resources to applications such that all apps get, on average, an equal share of resources over time
+Capacity-- The CapacityScheduler is designed to run Hadoop applications as a shared, multi-tenant cluster in an operator-friendly manner while maximizing the throughput and the utilization of the cluster.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Orchestration : Describes the automated arrangement, coordination, and management of complex computer systems, middleware, and services.
+
+In today’s world, Hypervisor is the new OS and Virtual Machines are the new
+processes. Many system programmers are familiar with the low level APIs that are exposed by the
+operating systems like Linux and Microsoft Windows. These APIs can be used to take control of
+the OS programmatically and help in developing management tools. Similar to the OS, Hypervisors
+expose APIs that can be invoked to manage the virtualized environments. Typical APIs include
+provisioning, de-provisioning, changing the state of VMs, configuring the running VMs and so on.
+While it may be easy to deal with one Hypervisor running on a physical server, it is complex to
+concurrently deal with a set of Hypervisors running across the datacenter. In a dynamic
+environment, this is a critical requirement to manage the resources and optimize the infrastructure.
+This is the problem that we try to solve in this project.
+Problem Definition
+– Build a fabric that can coordinate the provisioning of compute and storage
+resources by negotiating with a set of Hypervisors running across physical servers in the
+datacenter
+
+            libvirt
+Orch layer------------->hypervisors---->VMs
+
+Libvirt--> A toolkit to interact with the virtualization capabilities of recent versions of Linux (and other OSes).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+See hadoop job diagram
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hive:
+The Apache Hive™ data warehouse software facilitates querying and managing large datasets residing in distributed storage. Hive provides a mechanism to project structure onto this data and query the data using a SQL-like language called HiveQL
+
+Pig:
+Apache Pig is a platform for analyzing large data sets that consists of a high-level language for expressing data analysis programs, coupled with infrastructure for evaluating these programs. The salient property of Pig programs is that their structure is amenable to substantial parallelization, which in turns enables them to handle very large data sets. 
+
+------------------
+1st xen  .. no host os .. only vms
+2nd kvm  .. host os k uper vms
+3rd 
+
+----------------
+para-- identical to underlined hardware ni hota
+full me hota hai
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Montis describes the following categories:
+
+1. Key-values Stores
+The main idea here is using a hash table where there is a unique key and a pointer to a particular item of data. The Key/value model is the simplest and easiest to implement. But it is inefficient when you are only interested in querying or updating part of a value, among other disadvantages.
+Examples: Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB, Amazon SimpleDB, Riak
+
+2. Column Family Stores
+These were created to store and process very large amounts of data distributed over many machines. There are still keys but they point to multiple columns. The columns are arranged by column family.
+Examples: Cassandra, HBase
+
+3. Document Databases
+These were inspired by Lotus Notes and are similar to key-value stores. The model is basically versioned documents that are collections of other key-value collections. The semi-structured documents are stored in formats like JSON. Document databases are essentially the next level of Key/value, allowing nested values associated with each key.  Document databases support querying more efficiently.
+Examples: CouchDB, MongoDb
+
+4. Graph Databases
+Instead of tables of rows and columns and the rigid structure of SQL, a flexible graph model is used which, again, can scale across multiple 
+machines. NoSQL databases do not provide a high-level declarative query language like SQL to avoid overtime in processing. Rather, querying these databases is data-model specific. Many of the NoSQL platforms allow for RESTful interfaces to the data, while other offer query APIs.
+Examples: Neo4J, InfoGrid, Infinite Graph
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Read and write in Hadoop Hdfs..
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Normalizations
+joins
+fixed schema
+--> nahi chahiye hame nosql me but is present in relational databases.
+
+Desired	Characteris>
+"  High	Performance
+"  Consistency
+"  Durability
+"  Deployment	Flexibility
+"  Modeling	Flexibility
+"  Query	Flexibility
+
+Scsi-- small computer system interface.
+
+It looked big
+Needed something which is lean and mean
+More control on serialization
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SDN:
+SDN allows network administrators to manage network services through abstraction of lower level functionality. This is done by decoupling the system that makes decisions about where traffic is sent (the control plane) from the underlying systems that forwards traffic to the selected destination (the data plane). The inventors and vendors of these systems claim that this simplifies networking.[2]
+
+SDN requires some method for the control plane to communicate with the data plane. One such mechanism, OpenFlow, is often misunderstood to be equivalent to SDN, but other mechanisms could also fit into the concept. The Open Networking Foundation was founded to promote SDN and OpenFlow as marketing using the term cloud computing became popular.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Storage virtualization is a concept and term used within computer science. Specifically, storage systems may use virtualization concepts as a tool to enable better functionality and more advanced features within and across storage systems.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

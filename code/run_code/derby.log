@@ -1,0 +1,26 @@
+----------------------------------------------------------------
+2013-11-21 10:25:38.696 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.0 - (689064): instance a816c00e-0142-7a31-9266-000003c98338
+on database directory /root/phase2/newcode/metastore_db  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+2013-11-21 10:26:04.548 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.0 - (689064): instance 862e0071-0142-7a31-9266-000003c98338
+on database directory /root/phase2/newcode/TempStatsStore  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-11-21 10:26:04.617 GMT:
+Shutting down instance 862e0071-0142-7a31-9266-000003c98338
+----------------------------------------------------------------
+----------------------------------------------------------------
+2013-11-21 10:26:19.481 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.0 - (689064): instance 46a08075-0142-7a31-9266-000003c98338
+on database directory /root/phase2/newcode/TempStatsStore  
+
+Database Class Loader started - derby.database.classpath=''
+
+2013-11-21 10:26:19.635 GMT:
+Shutting down instance 46a08075-0142-7a31-9266-000003c98338
+----------------------------------------------------------------
